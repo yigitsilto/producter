@@ -17,6 +17,7 @@ public class PlayerController {
 
     @QueryMapping
     public List<PlayerEntity> findAll(){
+
         return playerService.findAll();
     }
 }

@@ -1,12 +1,10 @@
 package com.task.producter.player;
 
+import com.task.producter.enums.PlayerPositionsEnum;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "players")
@@ -14,6 +12,7 @@ import javax.persistence.Table;
 @Setter
 public class PlayerEntity {
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -24,6 +23,6 @@ public class PlayerEntity {
     private String surname;
 
     @Column(name = "position", nullable = false)
-    private String position;
+    private PlayerPositionsEnum position;
 
 }

@@ -1,0 +1,52 @@
+query PLAYERS {
+  players {
+  id
+  name
+  surname
+  position
+},
+}
+
+mutation CREATE_PLAYER {
+  createPlayer(input:{
+    name:"test"
+    surname:"deneme"
+    position:"C"
+  }) {name,surname,position}
+}
+
+mutation DELETE_PLAYER {
+  deletePlayer(id:4)
+}
+
+query TEAMS{
+  teams{
+    id
+    name
+  }
+}
+mutation CREATE_TEAM{
+  createTeam(input:{
+    name:"Takim"
+  }){id,name}
+}
+
+mutation DELETE_TEAM{
+  deleteTeam(id:14)
+}
+
+query TEAM_PLAYERS{
+  teamPlayers{id,playerId,teamId}
+}
+
+
+mutation CREATE_TEAM_PLAYER{
+  createTeamPlayer(input:{
+    playerId:6,
+    teamId:21
+  }){id,playerId,teamId}
+}
+
+mutation DELETE_TEAM_PLAYER{
+  deleteTeamPlayer(id:20)
+}

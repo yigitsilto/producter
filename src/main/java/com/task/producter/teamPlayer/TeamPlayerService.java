@@ -29,11 +29,15 @@ public class TeamPlayerService {
 
         this.playerAndTeamIsExists(playerId,teamId); // check the player or team exists
         this.checkDuplicate(playerId,teamId); // block duplicates
-        
+
         TeamPlayerEntity teamPlayerEntity = new TeamPlayerEntity();
         teamPlayerEntity.setPlayerId(playerId);
         teamPlayerEntity.setTeamId(teamId);
         return teamPlayerRepository.save(teamPlayerEntity);
+    }
+
+    public void delete(long id){
+        teamPlayerRepository.deleteById(id);
     }
 
     public void playerAndTeamIsExists(long playerId, long teamId) {

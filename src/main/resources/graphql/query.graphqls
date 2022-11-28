@@ -1,4 +1,5 @@
 type Query{
     players:[Player]
     teams:[Team]
+    teamPlayers:[TeamPlayer]
 }

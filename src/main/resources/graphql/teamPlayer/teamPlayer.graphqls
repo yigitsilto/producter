@@ -1,0 +1,5 @@
+type TeamPlayer{
+    id:ID!
+    playerId:ID!
+    teamId:ID!
+}

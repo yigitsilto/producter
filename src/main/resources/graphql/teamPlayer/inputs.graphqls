@@ -1,0 +1,4 @@
+input TeamPlayerInput{
+    playerId:ID!
+    teamID:ID!
+}

@@ -20,4 +20,8 @@ public class TeamMutation implements GraphQLMutationResolver {
     public TeamEntity createTeam(@Valid TeamDTO teamDTO){
         return teamService.save(teamDTO);
     }
+
+    public void deleteTeam(long id){
+        teamService.delete(id);
+    }
 }

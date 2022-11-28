@@ -2,4 +2,5 @@ type Mutation {
     createPlayer(input: PlayerInput):Player
     deletePlayer(id:ID):Boolean
     createTeam(input:TeamInput):Team
+    deleteTeam(id:ID):Boolean
 }

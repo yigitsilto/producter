@@ -1,4 +1,4 @@
 input TeamPlayerInput{
     playerId:ID!
-    teamID:ID!
+    teamId:ID!
 }

@@ -34,4 +34,8 @@ public class TeamService {
 
     }
 
+    public boolean isTeamExists(long id){
+        return teamRepository.findById(id).isPresent();
+    }
+
 }

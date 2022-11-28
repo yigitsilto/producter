@@ -37,5 +37,9 @@ public class PlayerService {
         playerRepository.deleteById(id);
     }
 
+    public boolean isPlayerExist(long id ){
+        return playerRepository.findById(id).isPresent();
+    }
+
 
 }

@@ -1,3 +1,4 @@
 type Mutation {
     createPlayer(input: PlayerInput):Player
+    deletePlayer(id:ID):Boolean
 }

@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.validation.Valid;
+
 @Slf4j
 @Component
 public class PlayerMutation implements GraphQLMutationResolver {
@@ -17,7 +19,16 @@ public class PlayerMutation implements GraphQLMutationResolver {
     PlayerService playerService;
 
 
-    public PlayerEntity createPlayer(PlayerEntity playerEntity){
-        return playerService.save(playerEntity);
+    public PlayerEntity createPlayer(@Valid PlayerDTO playerDTO){
+        return playerService.save(playerDTO);
     }
+
+    public void deletePlayer(long id){
+        playerService.delete(id);
+    }
+
+
+
+
+
 }

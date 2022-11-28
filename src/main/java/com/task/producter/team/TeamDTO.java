@@ -1,4 +1,4 @@
-package com.task.producter.player;
+package com.task.producter.team;
 
 import com.task.producter.enums.PlayerPositionsEnum;
 import lombok.Data;
@@ -9,18 +9,10 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class PlayerDTO {
+public class TeamDTO {
+
     @NotNull
     @NotEmpty
-    @NotBlank
     @Valid
     private String name;
-    @NotNull
-    @NotEmpty
-    @Valid
-    private String surname;
-    @NotNull
-    @NotEmpty
-    @Valid
-    private PlayerPositionsEnum position;
 }
